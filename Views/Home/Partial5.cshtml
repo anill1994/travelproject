@@ -1,0 +1,22 @@
+﻿@using TravelProject.Models.Sınıflar
+@model List<Blog>
+
+    <div class="box1-left">
+        @foreach (var item in Model)
+        {
+            <div class="bot-img">
+                <img style="height:80px;"  src="@item.BlogImage" alt="" />
+            </div>
+            <div class="bot-desc1">
+                @if (item.Aciklama.Length > 100)
+                {
+                    <p>@item.Aciklama.Substring(0, 80) </p>
+                }
+                else
+                {
+                    <p>@item.Aciklama </p>
+                }
+            </div>
+            <div class="clear"></div>
+        }
+    </div>

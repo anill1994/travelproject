@@ -1,0 +1,31 @@
+﻿@model TravelProject.Models.Sınıflar.Blog
+@{
+    ViewBag.Title = "YeniBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>YeniBlog</h2>
+
+<form action="/admin/yeniblog" method="post">
+    <div class="form-group">
+        <label>Baslik</label>
+        @Html.TextBoxFor(i => i.Baslik, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Tarih</label>
+        @Html.TextBoxFor(i => i.Tarih, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Aciklama</label>
+        @Html.TextAreaFor(i => i.Aciklama, 1, 10, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>BlogImage</label>
+        @Html.TextBoxFor(i => i.BlogImage, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Gönder</button>
+    </div>
+</form>
+
+
